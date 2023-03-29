@@ -1,3 +1,5 @@
+package openAiImg
+
 import com.aallam.openai.api.BetaOpenAI
 import com.aallam.openai.api.image.ImageCreation
 import com.aallam.openai.api.image.ImageSize
