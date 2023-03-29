@@ -1,17 +1,17 @@
 import com.pengrad.telegrambot.TelegramBot
+import com.pengrad.telegrambot.TelegramException
 import com.pengrad.telegrambot.UpdatesListener
 import com.pengrad.telegrambot.model.Update
-import common.OpenAiCommon
 import kotlinx.coroutines.runBlocking
-import openAiAudio.OpenAiTestAudio
-import openAiChat.OpenAiTestChat
+import telegramBot.TelegramBotTest
 
 suspend fun main(args: Array<String>) {
 
-    /*runBlocking {
-        telegramBot(args[0])
-    }*/
-    while(true) {
+    runBlocking {
+        TelegramBotTest().startBot(args[0], args[1])
+    }
+
+    /*while(true) {
         val reader = readLine()
         if (reader != null) {
             runBlocking {
@@ -28,21 +28,9 @@ suspend fun main(args: Array<String>) {
 
             }
         }
-    }
+    }*/
 }
 
-
-suspend fun telegramBot(key: String?){
-    val bot = TelegramBot(key)
-
-    bot.setUpdatesListener { updates: List<Update?>? ->
-        updates?.forEach { update ->
-            val chatId = update?.message()?.chat()?.id()
-
-        }
-        UpdatesListener.CONFIRMED_UPDATES_ALL
-    }
-}
 
 
 
