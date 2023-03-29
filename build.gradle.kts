@@ -19,7 +19,7 @@ dependencies {
     implementation("io.ktor:ktor-client-apache:2.2.4")
 
     // see https://github.com/pengrad/java-telegram-bot-api
-    implementation("com.github.pengrad:java-telegram-bot-api:6.3.0")
+    implementation("com.github.pengrad:java-telegram-bot-api:6.5.0")
 
     testImplementation(kotlin("test"))
 }
