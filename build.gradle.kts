@@ -6,8 +6,10 @@ plugins {
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
+
 repositories {
     mavenCentral()
+    google()
 }
 
 dependencies {
@@ -20,6 +22,8 @@ dependencies {
 
     // see https://github.com/pengrad/java-telegram-bot-api
     implementation("com.github.pengrad:java-telegram-bot-api:6.5.0")
+
+    implementation ("com.squareup.okio:okio:3.3.0")
 
     testImplementation(kotlin("test"))
 }
